@@ -1,0 +1,17 @@
+.Header {
+  .search-section {
+    text-align: left;
+  }
+  .sort-section {
+    text-align: right;
+  }
+  text-align: center;
+
+  .selection-wedge {
+    display: inline-block;
+    background-color: #ccc;
+    color: white;
+    word-break: break-all;
+    cursor: pointer;
+  }
+}

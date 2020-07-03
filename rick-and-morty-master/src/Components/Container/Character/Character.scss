@@ -1,0 +1,37 @@
+.Character {
+  border-radius: 1%;
+  background-color: grey;
+  height: 100%;
+  margin: 1px 0px;
+  border: 1px solid white;
+
+  .character-description > div {
+    color: white;
+  }
+  .character-description > hr {
+    color: white;
+    background-color: white;
+  }
+  .character-description .detail {
+    text-align: right;
+    color: orange;
+  }
+  .image-wrapper {
+    position: relative;
+    border: 1px solid transparent;
+    .character-image {
+      margin: auto;
+      align-self: center;
+      width: 100%;
+    }
+    .character-introduction {
+      background-color: grey;
+      opacity: 0.6;
+      position: absolute;
+      color: white;
+      font-size: 1rem;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
