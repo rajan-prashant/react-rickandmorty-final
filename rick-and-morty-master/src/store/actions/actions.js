@@ -1,15 +1,12 @@
 import { getFilterParams } from "../../utilities/util";
 import Axios from "axios";
-import App from "./../../App";
 import appStore from "../..";
 import { doFilter } from "../../utilities/util";
 
 export const SEARCH = "SEARCH";
 export const SORT = "SORT";
 export const FILTER = "FILTER";
-export const DESELECT = "DESELECT";
 export const GETCHARACTERS = "GET_CHARACTERS";
-// export const SEARCH = "SEARCH";
 
 export const searchCharacters = (searchString) => {
   let storeCopy = appStore.getState();
@@ -43,6 +40,7 @@ export const sortCharacters = (isAscending) => {
       } else if (isAscending === "descending") {
         return el2["id"] - el1["id"];
       }
+      return 0;
     }
   );
   return {
@@ -61,7 +59,7 @@ export const filterCharacters = (filterType, filter) => {
 
   // Toggle that filter
   filters[filterType].forEach((element, index) => {
-    if (element["name"] == filter["name"]) {
+    if (element["name"] === filter["name"]) {
       filter["selected"] = !filter["selected"];
       filters[filterType][index]["selected"] = filter["selected"];
     }
@@ -78,12 +76,6 @@ export const filterCharacters = (filterType, filter) => {
   return {
     type: FILTER,
     data: { displayedCharacterList },
-  };
-};
-
-export const deselectFilter = ({ type, paramValue }) => {
-  return {
-    type: DESELECT,
   };
 };
 

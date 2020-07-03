@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import "./Character.scss";
 
 const Character = (props) => {
@@ -7,7 +7,11 @@ const Character = (props) => {
   return (
     <div className="Character col-lg-3 col-xl-3 col-6">
       <div className="image-wrapper mb-5">
-        <img className="character-image" src={characterDetails.image} />
+        <img
+          alt={characterDetails.name}
+          className="character-image"
+          src={characterDetails.image}
+        />
         <div className="character-introduction px-2">
           <h4>{characterDetails.name}</h4>
           <div>

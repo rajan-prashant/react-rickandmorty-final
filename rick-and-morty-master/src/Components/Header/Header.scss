@@ -1,11 +1,11 @@
 .Header {
+  text-align: center;
   .search-section {
     text-align: left;
   }
   .sort-section {
     text-align: right;
   }
-  text-align: center;
 
   .selection-wedge {
     display: inline-block;
@@ -13,5 +13,7 @@
     color: white;
     word-break: break-all;
     cursor: pointer;
+    border: 1px solid wheat;
+    border-radius: 5px;
   }
 }

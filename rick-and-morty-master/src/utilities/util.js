@@ -50,6 +50,7 @@ function doFilter(displayedCharacterList) {
         ) {
           return true;
         }
+        return false;
       }
     );
   } else {

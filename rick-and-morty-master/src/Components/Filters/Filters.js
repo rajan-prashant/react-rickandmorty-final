@@ -10,7 +10,7 @@ const Filters = (props) => {
       setFilterList(props["filteredCharacterDetails"]);
     }
     return () => {};
-  });
+  }, [props]);
 
   return (
     // <div>Imagination</div>

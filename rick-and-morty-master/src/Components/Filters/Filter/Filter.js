@@ -1,9 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { connect } from "react-redux";
-import {
-  searchCharacters,
-  filterCharacters,
-} from "./../../../store/actions/actions";
+import { filterCharacters } from "./../../../store/actions/actions";
 
 const Filter = (props) => {
   const [filterList, setFilterList] = useState([]);
