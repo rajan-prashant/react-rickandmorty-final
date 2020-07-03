@@ -13,7 +13,6 @@ const Filters = (props) => {
   }, [props]);
 
   return (
-    // <div>Imagination</div>
     <Fragment>
       {filterList["filters"] ? (
         Object.keys(filterList["filters"]).map((filterType, index) => {

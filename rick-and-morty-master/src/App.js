@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { getCharacters } from "./store/actions/actions";
 
 class App extends Component {
-  state = { characterList: {}, displayedCharacter: {} };
+  state = { characterList: {}, displayedCharacter: {}, isExpanded: false };
 
   componentDidMount() {
     this.props.retrieveCharacters();
@@ -24,8 +24,34 @@ class App extends Component {
               <div className="ml-5 col-12">
                 <h3>
                   <b>Filters</b>
+                  <span
+                    hidden={this.state.isExpanded}
+                    class="btn btn-expand-collapse mx-1 ml-auto"
+                    onClick={() => {
+                      this.setState({ isExpanded: true });
+                    }}
+                  >
+                    +
+                  </span>
+                  <span
+                    hidden={!this.state.isExpanded}
+                    class="btn btn-expand-collapse mx-1 ml-auto"
+                    onClick={() => {
+                      this.setState({ isExpanded: false });
+                    }}
+                  >
+                    X
+                  </span>
                 </h3>
-                <Filters />
+                <div
+                  class={
+                    this.state.isExpanded
+                      ? "filters-expanded"
+                      : "filters-collapsed"
+                  }
+                >
+                  <Filters />
+                </div>
               </div>
             </div>
             <div className="col-12 col-md-9 col-xl-9">

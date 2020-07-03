@@ -1,4 +1,24 @@
 .App {
+  .btn-expand-collapse {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .btn-expand-collapse {
+      background-color: darkgrey;
+      border: 1px solid wheat;
+      border-radius: 25px;
+      cursor: pointer;
+      display: block;
+      margin-left: 100%;
+      float: right;
+    }
+    .filters-expanded {
+      display: block;
+    }
+    .filters-collapsed {
+      display: none;
+    }
+  }
 }
 
 .App-logo {
